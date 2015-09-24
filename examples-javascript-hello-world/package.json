@@ -1,0 +1,13 @@
+{
+  "name": "marak/examples-javascript-hello-world",
+  "version": "1.0.0",
+  "description": "hello there",
+  "language": "javascript",
+  "source": "module['exports'] = function helloWorld (hook) {\n  hook.res.write(\"Hello, this is a JavaScript function.\\n\")\n  hook.res.write(\"hook.params is populated with request parameters\\n\")\n  hook.res.write(JSON.stringify(hook.params, true, 2))\n  hook.res.end('');\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

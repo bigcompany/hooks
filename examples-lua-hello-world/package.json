@@ -1,0 +1,13 @@
+{
+  "name": "marak/examples-lua-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "language": "lua",
+  "source": "print (\"Hello, this is a Lua script.\")\nprint (\"Hook_params_* is populated with request parameters\")\nprint (\"Hook_params_owner: \" .. Hook_params_owner)\nprint (\"Hook_params_hook: \" .. Hook_params_hook)",
+  "main": "index.lua",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

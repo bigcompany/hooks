@@ -22,13 +22,43 @@ dir.forEach(function (item) {
     hooks.services[item] = {};
     var files = fs.readdirSync(__dirname + "/" + item);
     files.forEach(function(file){
-      // quick hack
+
       var _language = item.split('-')[1];
-      hooks.services[item] = {
+
+      var pkg =  {
         file: file,
         language: _language,
         source: fs.readFileSync(__dirname + "/" + item + "/" + file).toString()
       };
+
+      var pkg = {
+        "name": "marak/" + item,
+        "version": "1.0.0",
+        "description": "",
+        "language": _language,
+        "source": fs.readFileSync(__dirname + "/" + item + "/" + file).toString(),
+        "main": file,
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "author": "Marak",
+        "license": "MIT"
+      }
+
+      // auto-create package.json if missing
+      var oldPkg;
+      var exists = false;
+      try {
+        oldPkg = fs.readFileSync(__dirname + "/" + item + "/package.json").toString();
+        pkg = JSON.parse(oldPkg);
+        exists = true;
+      } catch (err) {
+        oldPkg = pkg;
+      }
+      if(!exists) {
+        fs.writeFileSync(__dirname + "/" + item + "/package.json", JSON.stringify(pkg, true, 2));
+      }
+      hooks.services[item] = pkg;
     });
   }
 });

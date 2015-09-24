@@ -1,0 +1,13 @@
+{
+  "name": "marak/gateway-perl",
+  "version": "1.0.0",
+  "description": "",
+  "language": "perl",
+  "source": "eval $Hook_params_source;",
+  "main": "index.pl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

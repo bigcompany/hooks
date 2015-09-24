@@ -1,0 +1,13 @@
+{
+  "name": "marak/examples-tcl-helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "language": "tcl",
+  "source": "puts {Hello, this is a tcl script.}\nputs {\\$Hook_params_* is populated with request parameters}\nputs {\\$Hook_params_owner $Hook_params_owner}\nputs {\\$Hook_params_hook $Hook_params_hook}",
+  "main": "index.tcl",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

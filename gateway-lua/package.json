@@ -1,0 +1,13 @@
+{
+  "name": "marak/gateway-lua",
+  "version": "1.0.0",
+  "description": "",
+  "language": "lua",
+  "source": "local func = assert(loadstring(Hook_params_source))\nfunc()",
+  "main": "index.lua",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

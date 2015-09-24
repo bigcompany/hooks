@@ -1,0 +1,13 @@
+{
+  "name": "marak/gateway-python",
+  "version": "1.0.0",
+  "description": "",
+  "language": "python",
+  "source": "exec Hook['params']['source']",
+  "main": "index.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}
