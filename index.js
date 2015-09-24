@@ -22,7 +22,13 @@ dir.forEach(function (item) {
     hooks.services[item] = {};
     var files = fs.readdirSync(__dirname + "/" + item);
     files.forEach(function(file){
-      hooks.services[item][file] = fs.readFileSync(__dirname + "/" + item + "/" + file).toString();
+      // quick hack
+      var _language = item.split('-')[1];
+      hooks.services[item] = {
+        file: file,
+        language: _language,
+        source: fs.readFileSync(__dirname + "/" + item + "/" + file).toString()
+      };
     });
   }
 });
