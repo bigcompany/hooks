@@ -23,7 +23,7 @@ dir.forEach(function (item) {
     var files = fs.readdirSync(__dirname + "/" + item);
     files.forEach(function(file){
 
-      var _language = item.split('-')[1];
+      var _language = item.split('-')[1] || "javascript";
 
       var pkg =  {
         file: file,

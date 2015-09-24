@@ -1,0 +1,13 @@
+{
+  "name": "marak/fraktur",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function (hook) {\n  var fraktur = require('fraktur');\n  // assumes text has been posted as form data or is part of query string\n  // you could just as easily parse hook.req for incoming data instead\n  hook.res.end(fraktur(hook.params.text));\n};\n\nmodule['exports'].schema = {\n  \"text\": {\n    \"type\": \"string\",\n    \"default\": \"Why, Hello there kind sir!\"\n  }\n};",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}

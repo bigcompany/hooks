@@ -1,0 +1,13 @@
+{
+  "name": "marak/geoip",
+  "version": "1.0.0",
+  "description": "",
+  "language": "javascript",
+  "source": "module['exports'] = function geoipHook (hook) {\n  var geoip = require('geoip-lite');\n  var ip = hook.params.ip;\n  if (typeof ip === \"undefined\" || ip.length === 0) {\n    ip = hook.req.headers['x-forwarded-for'];\n  }\n  console.log('attempting to lookup ' + ip);\n  var geo = geoip.lookup(ip);\n  if (geo === null) {\n    return hook.res.end(JSON.stringify({ message: \"invalid ip \" + ip.toString(), error: true }, true, 2));\n  }\n  geo.ip = ip;\n  return hook.res.end(JSON.stringify(geo, true, 2));\n};\n\nmodule['exports'].schema = {\n  \"ip\": {\n    \"type\": \"string\"\n  }\n};\n\nmodule['exports'].view = \"https://gist.githubusercontent.com/Marak/2585b2556386ffe1c31a/raw/view.html\";\nmodule['exports'].presenter = \"https://gist.githubusercontent.com/Marak/2585b2556386ffe1c31a/raw/presenter.js\";",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}
