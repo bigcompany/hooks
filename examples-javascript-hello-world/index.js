@@ -1,6 +1,10 @@
+// A simple hello world microservice 
+// Click "Deploy Service" to deploy this code
+// Service will respond to HTTP requests with a string
 module['exports'] = function helloWorld (hook) {
-  hook.res.write("Hello, this is a JavaScript function.\n")
-  hook.res.write("hook.params is populated with request parameters\n")
-  hook.res.write(JSON.stringify(hook.params, true, 2))
-  hook.res.end('');
+  // hook.req is a Node.js http.IncomingMessage
+  var host = hook.req.host;
+  // hook.res is a Node.js httpServer.ServerResponse
+  // Respond to the request with a simple string
+  hook.res.end(host + ' says, "Hello world!"');
 };
