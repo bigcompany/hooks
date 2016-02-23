@@ -1,0 +1,12 @@
+{
+  "name": "marak/examples-es7-hello-world",
+  "version": "1.0.0",
+  "description": "hello world",
+  "language": "es7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marak",
+  "license": "MIT"
+}
