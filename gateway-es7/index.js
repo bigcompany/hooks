@@ -1,11 +1,5 @@
 // gateway hook for running es7 microservices on hook.io in real-time without an account
 
-// covers all JavaScript and Coffee-script
-
-// example of deploying a js file to the hook.io cloud from the command line using cURL
-
-// cat echo.js | curl --data-urlencode source@- http://gateway.hook.io
-
 module['exports'] = function gatewayHook (hook) {
 
   var mschema = require('mschema');
