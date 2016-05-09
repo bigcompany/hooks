@@ -1,7 +1,7 @@
 {
   "name": "marak/examples-javascript-request-parameters",
   "version": "1.0.0",
-  "description": "access incoming request data",
+  "description": "",
   "language": "javascript",
   "source": "// Access incoming HTTP request data\nmodule['exports'] = function accessRequestData (hook) {\n  var params = hook.params;\n  // params contains all incoming request parameters,\n  // such as query string or form data.\n  // See http://hook.io/docs#data for more information\n  // Responds back with all incoming HTTP params\n  hook.res.write(JSON.stringify(hook.params, true, 2));\n  hook.res.end();\n};",
   "main": "index.js",

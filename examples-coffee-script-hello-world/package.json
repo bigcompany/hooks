@@ -2,7 +2,7 @@
   "name": "marak/examples-coffee-script-hello-world",
   "version": "1.0.0",
   "description": "",
-  "language": "coffee-script",
+  "language": "coffee",
   "source": "module['exports'] = (hook) ->\n  hook.res.write 'Hello, this is a JavaScript function.\\n'\n  hook.res.write 'hook.params is populated with request parameters\\n'\n  hook.res.write JSON.stringify(hook.params, true, 2)\n  hook.res.end ''\n  return",
   "main": "index.coffee",
   "scripts": {

@@ -1,7 +1,7 @@
 {
   "name": "marak/examples-javascript-send-http-request",
   "version": "1.0.0",
-  "description": "send outgoing http requests",
+  "description": "",
   "language": "javascript",
   "source": "module['exports'] = function simpleHttpRequest (hook) {\n  // npm modules available, see: http://hook.io/modules\n  var request = require('request');\n  request.get('http://httpbin.org/ip', function(err, res, body){\n    if (err) {\n      return hook.res.end(err.messsage);\n    }\n    hook.res.end(body);\n  })\n};",
   "main": "index.js",

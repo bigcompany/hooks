@@ -1,9 +1,9 @@
 {
   "name": "marak/examples-javascript-hello-world",
   "version": "1.0.0",
-  "description": "hello world",
+  "description": "",
   "language": "javascript",
-  "source": "module['exports'] = function helloWorld (hook) {\n  hook.res.write(\"Hello, this is a JavaScript function.\\n\")\n  hook.res.write(\"hook.params is populated with request parameters\\n\")\n  hook.res.write(JSON.stringify(hook.params, true, 2))\n  hook.res.end('');\n};",
+  "source": "// A simple hello world microservice \n// Click \"Deploy Service\" to deploy this code\n// Service will respond to HTTP requests with a string\nmodule['exports'] = function helloWorld (hook) {\n  // hook.req is a Node.js http.IncomingMessage\n  var host = hook.req.host;\n  // hook.res is a Node.js httpServer.ServerResponse\n  // Respond to the request with a simple string\n  hook.res.end(host + ' says, \"Hello world!\"');\n};",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
