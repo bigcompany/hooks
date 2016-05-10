@@ -1,7 +1,6 @@
 var hooks = {};
 module['exports'] = hooks;
 hooks.services = {};
-
 var fs = require('fs');
 
 var dir = fs.readdirSync(__dirname);
@@ -25,11 +24,16 @@ dir.forEach(function (item) {
 
       var _language = item.split('-')[1] || "javascript";
 
+      /*
       var pkg =  {
         file: file,
         language: _language,
         source: fs.readFileSync(__dirname + "/" + item + "/" + file).toString()
       };
+      */
+      if (file === "package.json") {
+        return;
+      }
 
       var pkg = {
         "name": "marak/" + item,
@@ -50,14 +54,18 @@ dir.forEach(function (item) {
       var exists = false;
       try {
         oldPkg = fs.readFileSync(__dirname + "/" + item + "/package.json").toString();
-        pkg = JSON.parse(oldPkg);
+        oldPkg = JSON.parse(oldPkg);
         exists = true;
       } catch (err) {
-        oldPkg = pkg;
+        throw err;
+        //oldPkg = pkg;
       }
       if(!exists) {
-        fs.writeFileSync(__dirname + "/" + item + "/package.json", JSON.stringify(pkg, true, 2));
+        //fs.writeFileSync(__dirname + "/" + item + "/package.json", JSON.stringify(pkg, true, 2));
+      } else {
+        pkg.description = oldPkg.description;
       }
+      fs.writeFileSync(__dirname + "/" + item + "/package.json", JSON.stringify(pkg, true, 2));
       hooks.services[item] = pkg;
     });
   }
