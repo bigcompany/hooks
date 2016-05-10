@@ -1,7 +1,6 @@
 {
   "name": "marak/examples-python3-hello-world",
   "version": "1.0.0",
-  "description": "",
   "language": "python3",
   "source": "print(\"Hello, this is a Python script.\")\nprint(\"Hook['params'] is populated with request parameters\")\nprint(Hook['params']['hook'])\nprint(\"Hook['req'] is the http request\")\nprint(Hook['req']['url'])",
   "main": "index.py",

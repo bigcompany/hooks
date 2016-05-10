@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-ruby",
   "version": "1.0.0",
-  "description": "",
   "language": "ruby",
   "source": "eval Hook['params']['source']",
   "main": "index.rb",

@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-scheme",
   "version": "1.0.0",
-  "description": "",
   "language": "scheme",
   "source": "(eval Hook_params_source)\n",
   "main": "index.ss",

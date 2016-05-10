@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-php",
   "version": "1.0.0",
-  "description": "",
   "language": "php",
   "source": "eval ($Hook['params']['source']);",
   "main": "index.php",

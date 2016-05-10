@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-lua",
   "version": "1.0.0",
-  "description": "",
   "language": "lua",
   "source": "local func = assert(loadstring(Hook_params_source))\nfunc()",
   "main": "index.lua",

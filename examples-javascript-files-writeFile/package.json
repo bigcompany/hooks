@@ -1,7 +1,7 @@
 {
-  "name": "marak/examples-javascript-files-writeFile",
+  "name": "marak/examples-javascript-files-writefile",
   "version": "1.0.0",
-  "description": "",
+  "description": "upload a file",
   "language": "javascript",
   "source": "module['exports'] = function writeFile (hook) {\n  hook.fs.writeFile('testing-file.txt', 'hello', function (err, file) {\n    if (err){ \n      return res.end(err.message);\n    }\n    hook.res.json(file);\n  });\n};",
   "main": "index.js",

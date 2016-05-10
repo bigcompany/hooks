@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-tcl",
   "version": "1.0.0",
-  "description": "",
   "language": "tcl",
   "source": "eval $Hook_params_source",
   "main": "index.tcl",

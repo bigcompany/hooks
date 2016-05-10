@@ -1,9 +1,8 @@
 {
   "name": "marak/examples-scheme-hello-world",
   "version": "1.0.0",
-  "description": "",
   "language": "scheme",
-  "source": "(begin \n  (display \"Hello, this is a Scheme script.\")\n  (newline)\n  (display \"Hook_params_* is populated with request parameters\")\n  (newline)\n  (display \"Hook_params_owner: \") (display Hook_params_owner)\n  (newline)\n  (display \"Hook_params_hook: \") (display Hook_params_hook)\n)",
+  "source": "(begin \n  (display \"Hello, this is a Scheme script.\")\n  (newline)\n  (display \"Hook_params_* is populated with request parameters\")\n  (newline)\n  (display \"Hook_params_foo: \") (display Hook_params_foo)\n)",
   "main": "index.ss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

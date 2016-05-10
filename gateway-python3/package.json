@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-python3",
   "version": "1.0.0",
-  "description": "",
   "language": "python3",
   "source": "exec(Hook['params']['source'])",
   "main": "index.py",

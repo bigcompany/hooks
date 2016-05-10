@@ -45,7 +45,6 @@ module['exports'] = function gatewayHook (hook) {
 
   // map validated / defaulted data to params
   hook.params = defaults.instance;
-  console.log(hook.params);
   
   m.exports(hook);
 };

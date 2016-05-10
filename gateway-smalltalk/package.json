@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-smalltalk",
   "version": "1.0.0",
-  "description": "",
   "language": "smalltalk",
   "source": "\"remark: may not be working correctly\"\n\"(Hook_params_source) displayNl\"\n(Behavior evaluate: (Hook_params_source))",
   "main": "index.st",

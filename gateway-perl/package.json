@@ -1,7 +1,6 @@
 {
   "name": "marak/gateway-perl",
   "version": "1.0.0",
-  "description": "",
   "language": "perl",
   "source": "eval $Hook_params_source;",
   "main": "index.pl",
