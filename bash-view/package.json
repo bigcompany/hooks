@@ -1,14 +1,13 @@
 {
-  "name": "hook.io-hooks",
+  "name": "bash-view",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.sh",
+  "view": "view.html",
+  "language": "bash",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "stackvana": "^1.2.0"
-  }
+  "license": "MIT"
 }

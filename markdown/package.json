@@ -1,5 +1,5 @@
 {
-  "name": "marak/markdown",
+  "name": "markdown",
   "version": "1.0.0",
   "description": "",
   "language": "javascript",
@@ -8,6 +8,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Marak",
+  "author": "examples",
   "license": "MIT"
 }

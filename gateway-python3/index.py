@@ -1,1 +1,0 @@
-exec(Hook['params']['source'])
