@@ -9,10 +9,3 @@ module['exports'] = function isTheWebSiteDown (hook) {
     hook.res.end('true');
   });
 };
-
-module['exports'].schema = {
-  "url": {
-    "type": "string",
-    "default": "http://google.com"
-  }
-};

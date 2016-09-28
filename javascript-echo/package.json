@@ -1,7 +1,7 @@
 {
-  "name": "fraktur",
+  "name": "javascript-echo",
   "version": "1.0.0",
-  "description": "",
+  "description": "echo incoming request data",
   "language": "javascript",
   "main": "index.js",
   "scripts": {

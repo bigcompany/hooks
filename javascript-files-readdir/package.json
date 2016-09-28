@@ -5,7 +5,8 @@
   "source": "module['exports'] = function readdir (hook) {\n  hook.fs.readdir('', function (err, files) {\n    if (err){ \n      return hook.res.end(err.message);\n    }\n    hook.res.json(files);\n  });\n};",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
   },
   "author": "examples",
   "license": "MIT"

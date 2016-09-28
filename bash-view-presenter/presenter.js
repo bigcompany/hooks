@@ -12,8 +12,7 @@ module['exports'] = function (service, callback) {
   // There are two ways to end the presenter
   $('.output').html(service.output);
   $('.foo').html('bar');
-  
-  console.log($.html())
+
   // 1. Call res.end() or res.json() directly
   callback(null, $.html());
   //res.end('ending')

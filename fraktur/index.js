@@ -4,10 +4,3 @@ module['exports'] = function (hook) {
   // you could just as easily parse hook.req for incoming data instead
   hook.res.end(fraktur(hook.params.text));
 };
-
-module['exports'].schema = {
-  "text": {
-    "type": "string",
-    "default": "Why, Hello there kind sir!"
-  }
-};

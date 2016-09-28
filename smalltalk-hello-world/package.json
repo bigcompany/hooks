@@ -6,7 +6,8 @@
   "source": "'Hello, this is a Smalltalk script.' displayNl !\n'Hook_params_* is populated with request parameters' displayNl !\n('Hook_params_foo: ' , Hook_params_foo) displayNl !\n",
   "main": "index.st",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "stack ."
   },
   "author": "examples",
   "license": "MIT"

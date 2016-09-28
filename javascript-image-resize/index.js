@@ -1,11 +1,12 @@
 module['exports'] = function imageResize (hook, callback) {
   // GraphicsMagick fully supported
-  var gm = require('gm');
+  var gm = require('gm'),
+      request = require('request');
   // for a more complete example that supports file uploads and streaming uploads
   // see: http://image.resize.hook.io
   // grab an image as a url
   // no file has been uploaded, fallback to the image "url" parameter
-  var stream = hook.open('https://hook.io/img/robotcat.png');
+  var stream = request('https://hook.io/img/robotcat.png');
   hook.res.writeHead(200, { 'Content-Type': 'image/png' });
   gm(stream)
   .options({imageMagick: true })

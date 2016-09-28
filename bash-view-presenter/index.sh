@@ -1,1 +1,1 @@
-echo "Hello, this is a Bash script.";
+echo "Hello, this is a Bash script."
